@@ -19,8 +19,9 @@ def get_japanese_emoticon(emoticon_file = './lib/emoticons.yml', emoticon)
   emoticon_library = load_library(emoticon_file)
   test = emoticon_library.keys.find do |english_emoticon|
     emoticon_library[english_emoticon][:english] == emoticon
-    binding.pry
+
   end
+    binding.pry
   if test
     return emoticon_library[test][:japanese]
   else
